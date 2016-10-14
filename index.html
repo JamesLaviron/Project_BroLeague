@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp" ng-controller="loginCtrl">
+<head>
+	<title>Watcher Login</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+</head>
+<body style="width: 100%; height: 955px"
+  data-vide-bg=" ogv: videos/Aatrox.ogv, mp4: videos/Aatrox.mp4, webm: videos/Aatrox.webm, poster: /videos/Aatrox.jpg"
+  data-vide-options="posterType: jpg, loop: true, muted: false, position: 0% 0%">
+			<!-- Top content -->
+			<div id="parent">
+				<form id="form_login">
+					<div class="container center_div"	>
+						<div id="form_login" class="form-group row">
+							<div class="col-sm-6 form-box">
+								<div class="form-top">
+									<div class="form-top-left">
+										<h1>Login to LeagueOfBros</h1>
+										<h2>Enter your Summoner Name and Region to log on:</h2>
+									</div>
+									<div class="form-top-right">
+										<i class="fa fa-key"></i>
+									</div>
+								</div>
+								<form role="form" action="" method="post" class="login-form">
+									<div class="form-group row">
+										<label for="form-summonerName" class="col-sm-2 col-form-label">Summoner</label>
+										<div class="col-sm-10">
+											<input type="text" name="form-summonerName" placeholder="SummonerName.." class="form-control" id="form-summonerName" ng-model="user.summonerName">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="form-Region" class="col-sm-2 col-form-label">Region</label>
+										<div id="select" class="col-sm-10">
+											<select name="form-Region" class="form-control" id="form-Region" ng-model="user.region">
+												<option disabled ng-selected="true">Choose here</option>
+												<option value="BR">BR</option>
+												<option value="EUNE">EUNE</option>
+												<option value="EUW">EUW</option>
+												<option value="JP">JP</option>
+												<option value="KR">KR</option>
+												<option value="LAN">LAN</option>
+												<option value="LAS">LAS</option>
+												<option value="NA">NA</option>
+												<option value="OCE">OCE</option>
+												<option value="TR">TR</option>
+												<option value="RU">RU</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="offset-sm-2 col-sm-10">
+											<button type="button" class="btn btn-primary btn-lg" ng-click="getInfo(user.summonerName,user.region)">Lets go!</button>
+										</div></div>
+									</form>
+					<!-- <div>
+						<h4>summonerName: {{user.summonerName}}</h4>
+						<h4>Region: {{user.region}}</h4>
+					</div>  -->	
+					<div>
+						<!-- <h5 ng-if= "checkUser(user.pwd,user.login)">User exists: true, {{checkUser(user.pwd,user.login)}}</h5> -->
+					</div>
+				</div> </div> </div>
+				<!-- Javascript -->
+				<script src="lib/jquery-3.1.1.min.js"></script>
+				<script src="lib/bootstrap.min.js"></script>
+				<script src="lib/angular.min.js"></script>
+				<script src="lib/jquery.vide.min.js"></script>
+				<script src="lib/angular-route.min.js"></script>
+				<script src="lib/d3.min.js"></script>
+				<script src="js/application/LoginApp-s2.1.js"></script>
+				<script src="js/services/AuthService-s2.2.js"></script>
+				<script src="js/services/ProfileService.js"></script>
+				<script src="js/controllers/LoginController-s2.2.js"></script>
+				<script src="js/controllers/ProfileController-s2.2.js"></script>
+
+			</form></div>
+		</body></html>

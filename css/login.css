@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'ralewayblack';
+    src: url('raleway-black-webfont.woff2') format('woff2'),
+         url('raleway-black-webfont.woff') format('wxoff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{ 
+	font-family: 'ralewayblack',Arial,sans-serif;
+	line-height: 36px;
+	padding: 0;
+}
+
+h1{
+	text-align: center;
+}
+
+h2{
+	text-align: left;
+	font-size: 120%;
+}
+#parent {
+    position:fixed;
+    top: 50%;
+    left: 40%;
+    width:45em;
+    height:20em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    background-color: #FF8C00;
+
+    style="width:400px; 
+    height:300px;"
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    border:4px solid #000000;
+    background:rgba(90,11,227,0.6);
+    -webkit-box-shadow: #B32082 3px 3px 3px;
+    -moz-box-shadow: #B32082 3px 3px 3px;
+     box-shadow: #B32082 3px 3px 3px;
+     color: black;
+     outline: 0;
+}
+#parent:focus{
+	outline: 0;
+}
+#select:focus{
+	outline: 0;
+}
+#form-Region{
+	outline: 0;
+}
