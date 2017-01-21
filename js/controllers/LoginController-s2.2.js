@@ -1,8 +1,8 @@
-angular.module('loginApp').controller('loginCtrl',loginCrtFnt);
+angular.module('broApp').controller('loginCtrl',loginCrtFnt);
 
 loginCrtFnt.$inject=['$scope','$log','$window', '$location', 'auth','prof'];
 
-function loginCrtFnt($scope, $log, $window, $location, auth, prof){
+function loginCrtFnt($scope, $log, $window, auth, prof){
 	$scope.logAuth = function() {
 		$log.info('user summonerName', $scope.user.summonerName);
 		$log.info('user region', $scope.user.region);
@@ -41,7 +41,7 @@ function loginCrtFnt($scope, $log, $window, $location, auth, prof){
 		if(auth.localAuthAsk(summonerName, region).equals(summonerName)){
 			
 			$log.info(auth.localAuthAsk(summonerName, region));
-			$window.location.href = "file:///home/victor/TP%20ANGULAR/TP1_Form/summonerNameSuccess.html";
+			$window.location.href = "#/profile";
 			return true;
 		}
 		return false;
@@ -54,8 +54,9 @@ function loginCrtFnt($scope, $log, $window, $location, auth, prof){
 		var checkUser = auth.httpRequestLOL(summonerName,regionLC);
 		checkUser.then(function(result){
 			alert(result);
-			window.location.href = "/profile";
+			$window.location.href = "#/profile";
 			prof.setIcon("662");
 		});
 	};
+	return true;
 }
